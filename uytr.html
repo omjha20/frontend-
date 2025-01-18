@@ -1,0 +1,451 @@
+<html>
+ <head>
+  <title>
+   Spiritual Emporium
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        header nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        header .cta {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+        .hero .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hero .content h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero .content p {
+            font-size: 1.2em;
+        }
+        .hero .content .btn {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+        .feature img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .feature h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .feature p {
+            font-size: 1em;
+        }
+        .offerings {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .offering {
+            width: 18%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .offering img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .offering h4 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .offering p {
+            font-size: 1em;
+        }
+        .contact {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .contact img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .contact form {
+            width: 50%;
+        }
+        .contact form input, .contact form select, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact form button {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer .subscribe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer .subscribe input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            width: 300px;
+        }
+        .footer .subscribe button {
+            padding: 10px;
+            border: none;
+            background-color: #4a90e2;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .footer .links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .footer .links div {
+            width: 20%;
+            text-align: left;
+        }
+        .footer .links div h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .footer .links div a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .footer .copyright {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+        @media (max-width: 768px) {
+            .features, .offerings, .contact {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature, .offering, .contact img, .contact form {
+                width: 80%;
+            }
+            .footer .links div {
+                width: 45%;
+                margin-bottom: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .footer .links div {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    The Wiccan Way
+   </div>
+   <nav>
+    <a href="#">
+     Home
+    </a>
+    <a href="#">
+     Product
+    </a>
+    <a href="#">
+     About Us
+    </a>
+    <a href="#">
+     Contact Us
+    </a>
+   </nav>
+   <a class="cta" href="#">
+    Get In Touch
+   </a>
+  </header>
+  <div class="hero">
+   <img alt="Candles and flowers on a table creating a serene atmosphere" height="600" src="https://storage.googleapis.com/a1aa/image/Er76u7gBhfxXPqZprF1A80cYejJsUcIu3J6dWwIhnAA7RM2TA.jpg" width="1200"/>
+   <div class="content">
+    <h1>
+     Spiritual Emporium
+    </h1>
+    <p>
+     Your destination for spiritual and holistic products.
+    </p>
+    <a class="btn" href="#">
+     Contact Us
+    </a>
+   </div>
+  </div>
+  <div class="section">
+   <h2>
+    About Us
+   </h2>
+   <p>
+    We are dedicated to providing authentic spiritual products that enhance your journey.
+   </p>
+   <img alt="Close-up of spiritual beads and a mala on a table" height="400" src="https://storage.googleapis.com/a1aa/image/nefR4QLP5wsVmkfHCXjLzt4tSv5fKg4GNE5CzvmSLDeAOixeE.jpg" width="800"/>
+  </div>
+  <div class="section features">
+   <div class="feature">
+    <img alt="Statue representing collaboration" height="200" src="https://storage.googleapis.com/a1aa/image/ywArPWvlipLpKhpVic9ikSy2AnwR9dK7n9lqZLX2BXWeIG7JA.jpg" width="300"/>
+    <h3>
+     Collaboration
+    </h3>
+    <p>
+     We believe in the power of collaboration to drive innovative solutions for our clients.
+    </p>
+   </div>
+   <div class="feature">
+    <img alt="Incense sticks representing creativity" height="200" src="https://storage.googleapis.com/a1aa/image/pR3fjofWKXl7h0XCpU3CwejYeh4ueAArOcv20fu80QAAeIG7JA.jpg" width="300"/>
+    <h3>
+     Creativity
+    </h3>
+    <p>
+     Our creativity fuels our approach to delivering unique and impactful designs.
+    </p>
+   </div>
+   <div class="feature">
+    <img alt="Landscape representing integrity" height="200" src="https://storage.googleapis.com/a1aa/image/5C3XfhnPXLWoXizE34FVueaUaZuOSvmQZt1ZPHJZM0ExRM2TA.jpg" width="300"/>
+    <h3>
+     Integrity
+    </h3>
+    <p>
+     Integrity is at the core of everything we do, ensuring trust and transparency.
+    </p>
+   </div>
+  </div>
+  <div class="section">
+   <h2>
+    Our Offerings
+   </h2>
+   <div class="offerings">
+    <div class="offering">
+     <img alt="Placeholder image for John Doe" height="150" src="https://storage.googleapis.com/a1aa/image/75wue3CHhYy0I62bRSJq1Vr6nz7X1V890wx6ys8OMnO7IG7JA.jpg" width="150"/>
+     <h4>
+      John Doe
+     </h4>
+     <p>
+      John leads our creative team with over 15 years of experience in design and branding.
+     </p>
+    </div>
+    <div class="offering">
+     <img alt="Placeholder image for Sarah Lee" height="150" src="https://storage.googleapis.com/a1aa/image/ASXe7AyGE2VfepcJOJ7mcECW6FrBvPoLiIhPjNAB19AujYsnA.jpg" width="150"/>
+     <h4>
+      Sarah Lee
+     </h4>
+     <p>
+      Sarah specializes in marketing strategies and client relations.
+     </p>
+    </div>
+    <div class="offering">
+     <img alt="Placeholder image for Michael Brown" height="150" src="https://storage.googleapis.com/a1aa/image/6wi70xnofySzMqOR3OUdsv4QmOgqStV65rFhNIFY8Gi5IG7JA.jpg" width="150"/>
+     <h4>
+      Michael Brown
+     </h4>
+     <p>
+      Michael is an expert in web development and technology solutions.
+     </p>
+    </div>
+    <div class="offering">
+     <img alt="Placeholder image for Emily Clark" height="150" src="https://storage.googleapis.com/a1aa/image/euvIYeuUg3m9NUG8xjXQQ9nZ6VcpMwwDezzx2caYqeHxHxYPB.jpg" width="150"/>
+     <h4>
+      Emily Clark
+     </h4>
+     <p>
+      Emily ensures our projects run smoothly and meet client expectations.
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="section contact">
+   <img alt="Statue of a deity in a garden" height="600" src="https://storage.googleapis.com/a1aa/image/sVW1b3pEIh77OBDmgbcBwveR14sGXUpwLaCeJ1XBAaepjYsnA.jpg" width="400"/>
+   <form>
+    <h2>
+     Contact Us
+    </h2>
+    <p>
+     Fill out the form to connect with us.
+    </p>
+    <input placeholder="First name" type="text"/>
+    <input placeholder="Last name" type="text"/>
+    <input placeholder="Email" type="email"/>
+    <input placeholder="Company name" type="text"/>
+    <input placeholder="Company size" type="text"/>
+    <select>
+     <option>
+      Which topic best fits your needs?
+     </option>
+     <option>
+      Option 1
+     </option>
+     <option>
+      Option 2
+     </option>
+     <option>
+      Option 3
+     </option>
+    </select>
+    <textarea placeholder="How can we help?"></textarea>
+    <button type="submit">
+     Submit
+    </button>
+   </form>
+  </div>
+  <div class="section">
+   <h2>
+    Discover Spiritual Products
+   </h2>
+   <p>
+    Browse our collection of spiritual items to elevate your practice.
+   </p>
+   <a class="btn" href="#">
+    Shop Now
+   </a>
+  </div>
+  <footer class="footer">
+   <div class="subscribe">
+    <input placeholder="Join our spiritual community" type="email"/>
+    <button>
+     Subscribe
+    </button>
+   </div>
+   <div class="links">
+    <div>
+     <h4>
+      Our Products
+     </h4>
+     <a href="#">
+      Features
+     </a>
+     <a href="#">
+      Pricing
+     </a>
+    </div>
+    <div>
+     <h4>
+      Resources
+     </h4>
+     <a href="#">
+      Blog
+     </a>
+     <a href="#">
+      Books
+     </a>
+     <a href="#">
+      Workshops
+     </a>
+    </div>
+    <div>
+     <h4>
+      Company Info
+     </h4>
+     <a href="#">
+      About Us
+     </a>
+     <a href="#">
+      Get in Touch
+     </a>
+    </div>
+    <div>
+     <h4>
+      Spiritual Practices
+     </h4>
+     <a href="#">
+      Personal Care
+     </a>
+     <a href="#">
+      Start Your Spiritual Journey
+     </a>
+    </div>
+   </div>
+   <div class="copyright">
+    © 2024 Brand, Inc. Privacy Terms Sitemap
+   </div>
+  </footer>
+ </body>
+</html>
