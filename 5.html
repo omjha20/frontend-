@@ -1,0 +1,473 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   The Wiccan Way
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            box-sizing: border-box;
+            background: url('crystals000.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover; /* Ensures full coverage */
+            color:#f1f1f1;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1e1e1e;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #f1f1f1;
+            margin: 0 10px;
+        }
+        .navbar a:hover {
+            color: #6c63ff;
+        }
+        .navbar .logo {
+            font-weight: bold;
+        }
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .nav-links a {
+            margin: 0 10px;
+        }
+        .navbar .cta {
+            background-color: #6c63ff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .hero {
+    background: url('crystals000.jpg') no-repeat center center/cover;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 100px 20px;
+}
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 10px 0 20px;
+        }
+        .hero .btn {
+            background-color: #6c63ff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .content {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product {
+            border: 1px solid #444;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: left;
+            background-color: #1e1e1e;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product p {
+            margin: 5px 0;
+        }
+        .product .price {
+            font-weight: bold;
+        }
+        .product .stock {
+            color: green;
+        }
+        .product .out-of-stock {
+            color: red;
+        }
+        .product .btn {
+            background-color: #fff;
+            color: #6c63ff;
+            padding: 5px 10px;
+            border: 1px solid #6c63ff;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer .links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .footer .links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .footer .newsletter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        .footer .newsletter button {
+            padding: 10px;
+            border: none;
+            background-color: #6c63ff;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .footer .social {
+            margin-top: 20px;
+        }
+        .footer .social a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .footer .social a:hover {
+            color: #6c63ff;
+        }
+        .footer .language {
+            margin-top: 20px;
+        }
+        .footer .language select {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+            }
+            .navbar .nav-links.mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .navbar .nav-links.mobile a {
+                margin: 10px 0;
+            }
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+  </style>
+ </head>
+ <body>
+    <body style="background: url('crystals000.jpg') no-repeat center center fixed; background-size: cover;"></body>
+  <div class="navbar">
+   <div class="logo">
+    The Wiccan Way
+   </div>
+   <div class="nav-links">
+    <a href="#">
+     Home
+    </a>
+    <a href="#">
+     Product
+    </a>
+    <a href="#">
+     About Us
+    </a>
+    <a href="#">
+     Contact Us
+    </a>
+   </div>
+   <a class="cta" href="#">
+    Get In Touch
+   </a>
+  </div>
+  <div class="hero">
+   <h1>
+    Explore you magical abilities   </h1>
+   <p>
+    Explore our range of spiritual essentials.
+   </p>
+   <a class="btn" href="#">
+    Shop Now
+   </a>
+  </div>
+  <div class="content">
+   <h2>
+    Crystals
+   </h2>
+   <div class="products">
+    <div class="product">
+     <img alt="rudraksh1" height="200" src="Large Moroccan Celestite.jpg" width="200"/>
+     <h3>
+        Large Moroccan Celestite
+     </h3>
+     <p class="price">
+      Price: ₹1,500
+     </p>
+     <p class="stock">
+      In Stock
+     </p>
+     <a class="btn" href="#">
+      Add to Cart
+     </a>
+     <a class="btn" href="#">
+        Buy Now
+     </a>
+    </div>
+    <div class="product">
+     <img alt="rudraksh8" height="200" src="Agate, Malachite & Amethyst Wallpapers.jpg" width="200"/>
+     <h3>
+        Agate, Malachite & Amethyst Wallpapers
+     </h3>
+     <p class="price">
+      Price: ₹699
+     </p>
+     <p class="out-of-stock">
+      Out of Stock
+     </p>
+     <a class="btn" href="#">
+      Add to Cart
+     </a>
+     <a class="btn" href="#">
+        Buy Now
+     </a>
+    </div>
+    <div class="product">
+     <img alt="rudraksh2" height="200" src="Purple Amethyst Benefits, Meanings and Uses.jpg" width="200"/>
+     <h3>
+        Purple Amethyst
+     </h3>
+     <p class="price">
+      Price: ₹1,799
+     </p>
+     <p class="stock">
+      In Stock
+     </p>
+     <a class="btn" href="#">
+      Add to Cart
+     </a>
+     <a class="btn" href="#">
+        Buy Now
+     </a>
+    </div>
+    <div class="product">
+     <img alt="rudraksh3" height="200" src="Natural Citrine cluster.jpg" width="200"/>
+     <h3>
+        Natural Citrine cluster
+     </h3>
+     <p class="price">
+      Price: ₹5,999
+     </p>
+     <p class="stock">
+      In Stock
+     </p>
+     <a class="btn" href="#">
+      Add to Cart
+     </a>
+     <a class="btn" href="#">
+        Buy Now
+     </a>
+    </div>
+    <div class="product">
+     <img alt="rudraksh4" height="200" src="Raw Amethyst Crystal Points.jpg" width="200"/>
+     <h3>
+        Raw Amethyst Crystal
+     </h3>
+     <p class="price">
+      Price: ₹799
+     </p>
+     <p class="stock">
+      In Stock
+     </p>
+     <a class="btn" href="#">
+      Add to Cart
+     </a>
+     <a class="btn" href="#">
+        Buy Now
+     </a>
+    </div>
+    <div class="product">
+     <img alt="rudraksh5" height="200" src="The moon Knows all My Secrets.jpg" width="200"/>
+     <h3>
+        The moon Knows all My Secrets
+     </h3>
+     <p class="price">
+      Price: ₹399
+     </p>
+     <p class="stock">
+      In Stock
+     </p>
+     <a class="btn" href="#">
+      Add to Cart
+     </a>
+     <a class="btn" href="#">
+        Buy Now
+     </a>
+    </div>
+    <div class="product">
+     <img alt="rudraksh6" height="200" src="Rose Quartz.jpg" width="200"/>
+     <h3>
+        Rose Quartz
+        </h3>
+     <p class="price">
+      Price: ₹800
+     </p>
+     <p class="out-of-stock">
+      Out of Stock
+     </p>
+     <a class="btn" href="#">
+      Add to Cart
+     </a>
+     <a class="btn" href="#">
+        Buy Now
+     </a>
+    </div>
+    <div class="product">
+     <img alt="rudraksh7" height="200" src="Rose Quartz Wallpaper.jpg" width="200"/>
+     <h3>
+     Quartz     
+    </h3>
+     <p class="price">
+      Price: ₹599
+     </p>
+     <p class="stock">
+      In Stock
+     </p>
+     <a class="btn" href="#">
+      Add to Cart
+     </a>
+     <a class="btn" href="#">
+        Buy Now
+     </a>
+    </div>
+   </div>
+   <!-- Back Button -->
+<div style="margin: 20px;">
+    <a href="products.html" style="
+        padding: 10px 20px; 
+        background-color: #6c63ff; 
+        color: #fff; 
+        text-decoration: none; 
+        border-radius: 5px;
+        font-size: 16px;
+        display: inline-block;">
+        ⬅ Back to Products
+    </a>
+</div>
+  </div>
+  <div class="footer">
+   <div class="links">
+    <a href="#">
+     Pricing
+    </a>
+    <a href="#">
+     About us
+    </a>
+    <a href="#">
+     Features
+    </a>
+    <a href="#">
+     Help Center
+    </a>
+    <a href="#">
+     Contact us
+    </a>
+    <a href="#">
+     FAQs
+    </a>
+    <a href="#">
+     Careers
+    </a>
+   </div>
+   <div class="newsletter">
+    <input placeholder="Input your email" type="email"/>
+    <button>
+     Subscribe
+    </button>
+   </div>
+   <div class="social">
+    <a href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-facebook-f">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-linkedin-in">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-youtube">
+     </i>
+    </a>
+   </div>
+   <div class="language">
+    <select>
+     <option value="en">
+      English
+     </option>
+     <option value="es">
+      Spanish
+     </option>
+     <option value="fr">
+      French
+     </option>
+     <option value="de">
+      German
+     </option>
+    </select>
+   </div>
+   <p>
+    © 2024 Brand, Inc. • Privacy • Terms • Sitemap
+   </p>
+  </div>
+ </body>
+</html>

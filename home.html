@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Emporium</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #121212; /* Dark background */
+            color: #f1f1f1; /* Light text */
+        }
+
+        /* Header and Layout */
+        header {
+            background-color: #1e1e1e; /* Darker header */
+            border-bottom: 1px solid #333;
+            padding: 10px 20px;
+        }
+
+        .layouts {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #4a90e2; /* Accent color */
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .search-bar select,
+        .search-bar input[type="search"] {
+            padding: 8px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #1e1e1e;
+            color: #f1f1f1;
+        }
+
+        .search-bar .search-icon {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 8px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        /* Sign-in Box */
+        .sign-in-box {
+            border: 1px solid #333;
+            padding: 5px 15px;
+            border-radius: 5px;
+            background-color: #1e1e1e;
+            text-align: center;
+            font-size: 0.9em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .sign-in-box p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .sign-in-box a {
+            text-decoration: none;
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+        .sign-in-box a:hover {
+            text-decoration: underline;
+        }
+
+        .sign-in-box span {
+            color: #aaa;
+            font-size: 0.8em;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #f1f1f1;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #4a90e2;
+        }
+        .cart-icon {
+            font-size: 24px;
+            color: #f1f1f1;
+            position: relative;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .cart-icon:hover {
+            color: #4a90e2;
+        }
+
+        .cart-icon span {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #ff4444;
+            color: white;
+            font-size: 12px;
+            border-radius: 50%;
+            padding: 4px 7px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+            color: #f1f1f1;
+            margin-bottom: 20px;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: cover;
+            filter: brightness(0.7); /* Dim the image for better readability */
+        }
+
+        .hero .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero .content h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero .content p {
+            font-size: 1.5em;
+        }
+
+        .hero .content .btn {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        /* Section */
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #1e1e1e;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #4a90e2;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: #d4d4d4;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .footer .subscribe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer .subscribe input {
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px 0 0 5px;
+            background-color: #121212;
+            color: #f1f1f1;
+            margin-right: -1px;
+        }
+
+        .footer .subscribe button {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .footer .links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .footer .links div {
+            text-align: left;
+        }
+
+        .footer .links h4 {
+            margin-bottom: 10px;
+            color: #4a90e2;
+        }
+
+        .footer .links a {
+            text-decoration: none;
+            color: #d4d4d4;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .footer .links a:hover {
+            color: #4a90e2;
+        }
+        
+    </style>
+</head>
+<body>
+    <canvas id="smokeCanvas"></canvas>
+<script>
+    // Initialize canvas
+    const canvas = document.getElementById('smokeCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particlesArray = [];
+
+    // Particle Class
+    class Particle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.size = Math.random() * 20 + 10; // Size of the smoke puff
+            this.speedX = (Math.random() - 0.5) * 1.5; // Horizontal drift
+            this.speedY = Math.random() * -2 - 1; // Rising upward
+            this.opacity = 1; // Start fully opaque
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.size *= 0.95; // Gradually shrink
+            this.opacity -= 0.02; // Gradually fade out
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.closePath();
+
+            // Gradient for smoke effect
+            const gradient = ctx.createRadialGradient(
+                this.x, this.y, this.size * 0.3,
+                this.x, this.y, this.size
+            );
+            gradient.addColorStop(0, `rgba(200, 200, 200, ${this.opacity})`);
+            gradient.addColorStop(1, `rgba(100, 100, 100, 0)`);
+
+            ctx.fillStyle = gradient;
+            ctx.fill();
+        }
+    }
+
+    // Create smoke particles
+    function createParticles() {
+        for (let i = 0; i < 50; i++) {
+            const x = canvas.width / 2; // Start at the center
+            const y = canvas.height - 100; // Start near the bottom
+            particlesArray.push(new Particle(x, y));
+        }
+    }
+
+    // Animate particles
+    function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (let i = 0; i < particlesArray.length; i++) {
+            particlesArray[i].update();
+            particlesArray[i].draw();
+
+            // Remove particles when they are too small or fully transparent
+            if (particlesArray[i].size <= 1 || particlesArray[i].opacity <= 0) {
+                particlesArray.splice(i, 1);
+                i--;
+            }
+        }
+
+        if (particlesArray.length > 0) {
+            requestAnimationFrame(animateParticles);
+        } else {
+            // Remove the canvas after animation ends
+            setTimeout(() => {
+                document.body.removeChild(canvas);
+            }, 1000);
+        }
+    }
+
+    // Start the smoke effect
+    function startSmokeEffect() {
+        createParticles();
+        animateParticles();
+    }
+
+    // Trigger the smoke effect when the page loads
+    window.onload = () => {
+        startSmokeEffect();
+
+        // Stop adding particles after 2 seconds
+        setTimeout(() => {
+            particlesArray = []; // Clear particles
+        }, 2000);
+    };
+</script>
+
+    <header>
+        <div class="main-header">
+            <div class="layouts">
+                <div class="logo">The Wiccan Way</div>
+                <div class="search-bar">
+                    <select>
+                        <option>ALL</option>
+                    </select>
+                    <input type="search" placeholder="Search...">
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="sign-in-box">
+                    <p>Hello, <a href="sign in.html">Sign in</a><br>
+                        <span>Account & Lists</span>
+                    </p>
+                </div>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+            <div class="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>    
+        <div class="preference">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </div>
+    </header>    
+    <div class="hero">
+        <img alt="Candles and flowers on a table creating a serene atmosphere" src="home page.jpeg"/>
+        <div class="content">
+            <h1> Magical Emporium</h1>
+            <p>Your destination for spiritual and holistic products.</p>
+            <a class="btn" href="products.html">Shop Now</a>
+        </div>
+    </div>
+    <div class="section">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing authentic spiritual products that enhance your journey.</p>
+    </div>
+    <footer class="footer">
+        <div class="subscribe">
+            <input type="email" placeholder="Join our spiritual community" required/>
+            <button>Subscribe</button>
+        </div>
+        <div class="links">
+            <div>
+                <h4>Our Products</h4>
+                <a href="products.html">Features</a>
+                <a href="products.html">Pricing</a>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <a href="blog.html">Blog</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+        <p>&copy; 2024 Spiritual Emporium. All rights reserved.</p>
+    </footer>
+    <script src="server.js"></script>
+</body>
+</html>
